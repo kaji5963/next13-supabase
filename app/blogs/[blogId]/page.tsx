@@ -4,7 +4,7 @@ import { format } from 'date-fns'
 import { ArrowUturnLeftIcon } from '@heroicons/react/24/solid'
 import type { Database } from '@/database.types'
 
-type Blog = Database['public']['Tables']['notes']['Row']
+type Blog = Database['public']['Tables']['blogs']['Row']
 
 type PageProps = {
   params: {
@@ -40,6 +40,9 @@ export default async function BlogDetailPage({ params }: PageProps) {
       </p>
       <p>
         <strong className="mr-3">Task Title:</strong> {blog.title}
+      </p>
+      <p>
+        <strong className="mr-3">Task Title:</strong> {blog.content}
       </p>
       <p>
         <strong className="mr-3">Created at:</strong>
